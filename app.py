@@ -1,9 +1,10 @@
-import translator as t
 import streamlit as st
 from streamlit_lottie import st_lottie
 
+import translator as t
 
 st.set_page_config(page_title="dots & dash", page_icon="logo.png")
+
 with st.container():
     l_side, m_side, r_side = st.columns([1, 5, 1])
     with m_side:
@@ -22,15 +23,15 @@ with st.container():
 
         st.header("Welcome to dots & dash")
         st.subheader(
-            "\nThis is a online text to Morse code translator made in Python and Streamlit.")
+            "\nThis is a online text to Morse code translator made in Python and Streamlit."
+        )
         st.subheader("How to translate:")
         st.text("1. Enter your input in the input box.")
         st.text("2. Click translate button.")
         st.text("3. Get the text translated..")
 
         choice = st.selectbox(
-            "Do you want to traslate:", ("Text to Morse Code",
-                                         "Morse Code To Text")
+            "Do you want to traslate:", ("Text to Morse Code", "Morse Code To Text")
         )
 
     if choice == "Text to Morse Code":
@@ -44,7 +45,8 @@ with st.container():
                 st.subheader("The translation will be displayed below:")
 
                 st.markdown(
-                    '" " represents ending of each letter and "/" represents whitespace between each word.')
+                    '" " represents ending of each letter and "/" represents whitespace between each word.'
+                )
                 st.subheader("")
                 trans = t.to_morse(inp)
                 st.subheader(f"Output:- {trans}")

@@ -51,4 +51,4 @@ def to_text(morse_code):
 
 def to_aud(text):
     tts = gTTS(text=text, lang='en', slow=True)
-    tts.save("S:\Morse Code\output.mp3")
+    tts.save("./output.mp3")
